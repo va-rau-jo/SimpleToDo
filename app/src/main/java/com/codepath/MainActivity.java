@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lvItems = (ListView) findViewById(R.id.lvItems);
+        lvItems = findViewById(R.id.lvItems);
         // initializes items
         readItems();
-        itemsAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, items);
+        itemsAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, items);
         lvItems.setAdapter(itemsAdapter);
 
         setUpListViewListener();
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAddItem(View v) {
-        EditText etNewItem = (EditText) (findViewById(R.id.etNewItem));
+        EditText etNewItem = (findViewById(R.id.etNewItem));
         String itemText = etNewItem.getText().toString();
         itemsAdapter.add(itemText);
         etNewItem.setText("");
