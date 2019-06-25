@@ -1,8 +1,10 @@
 package com.codepath;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +33,20 @@ public class EditActivity extends AppCompatActivity {
         data.putExtra(ITEM_TEXT, etItemText.getText().toString());
         data.putExtra(ITEM_POSITION, position);
         setResult(RESULT_OK, data);
+        hideKeyboard();
         finish();
+    }
+
+    // hide the keyboard after hitting the save button
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        View view = this.getCurrentFocus();
+
+        if (view == null) {
+            view = new View(this);
+        }
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }

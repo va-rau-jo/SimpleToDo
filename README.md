@@ -21,6 +21,8 @@ The following **stretch** features are implemented:
 The following **additional** features are implemented:
 
 * [X] The user can't add any empty items to the ListView.
+* [X] The keyboard is hidden after hitting save in the EditActivity
+
 
 ## Video Walkthrough
 
