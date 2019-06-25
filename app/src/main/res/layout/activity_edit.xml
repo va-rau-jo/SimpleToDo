@@ -23,7 +23,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnSave"
@@ -35,7 +36,8 @@
         android:text="Save"
         android:onClick="onSaveItem"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEditItem" />
+        app:layout_constraintTop_toBottomOf="@+id/etEditItem"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/etEditItem"
