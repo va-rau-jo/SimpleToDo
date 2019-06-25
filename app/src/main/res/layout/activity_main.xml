@@ -43,8 +43,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Add a new item"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddItem"
         app:layout_constraintStart_toStartOf="parent" />
